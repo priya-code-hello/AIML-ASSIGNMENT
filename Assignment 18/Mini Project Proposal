@@ -1,0 +1,51 @@
+# Mini Project Proposal
+
+## Student Performance Prediction using Machine Learning
+
+### Problem Statement
+
+Students often struggle to understand how their study habits affect academic performance. It becomes difficult to identify whether study hours, attendance, and assignment completion are improving their marks. This project aims to build a machine learning model that predicts student performance based on these factors. The system will help students understand how their inputs influence their final marks and guide them to improve performance.
+
+### Dataset
+
+The dataset contains information related to student study behavior and academic performance.
+
+**Features (Input):**
+
+* Study Hours
+* Attendance
+* Assignment Marks
+
+**Label (Output):**
+
+* Final Marks
+
+**Example Dataset**
+
+| Study Hours | Attendance | Assignment | Marks |
+| ----------- | ---------- | ---------- | ----- |
+| 2           | 70         | 60         | 55    |
+| 4           | 80         | 70         | 65    |
+| 6           | 90         | 85         | 80    |
+
+### Algorithm
+
+Linear Regression will be used to predict the final marks. This algorithm finds the relationship between input features and output marks. It helps in predicting continuous numerical values based on input data.
+
+### Expected Output
+
+The system will take study-related inputs and predict student marks.
+
+**Example:**
+
+Input:
+Study Hours = 5
+Attendance = 85
+Assignment Marks = 75
+
+Output:
+Predicted Marks = 72
+
+### Conclusion
+
+This project helps in understanding how different academic factors affect student performance. It can guide students to improve study habits and achieve better results.
