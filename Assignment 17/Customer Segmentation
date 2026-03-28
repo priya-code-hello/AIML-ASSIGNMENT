@@ -1,0 +1,26 @@
+customers = [
+    [20, 30],
+    [25, 35],
+    [30, 80],
+    [35, 85],
+    [40, 20],
+    [45, 25]
+]
+
+c1 = customers[0]
+c2 = customers[2]
+
+cluster1 = []
+cluster2 = []
+
+for point in customers:
+    d1 = abs(point[0]-c1[0]) + abs(point[1]-c1[1])
+    d2 = abs(point[0]-c2[0]) + abs(point[1]-c2[1])
+
+    if d1 < d2:
+        cluster1.append(point)
+    else:
+        cluster2.append(point)
+
+print("Cluster 1:", cluster1)
+print("Cluster 2:", cluster2)
