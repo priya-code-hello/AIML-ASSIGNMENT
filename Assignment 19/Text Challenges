@@ -1,0 +1,48 @@
+# Text Challenges
+
+## Introduction
+
+Text data collected from social media, chats, and messages is often messy and unstructured. It may contain slang words, emojis, spelling mistakes, abbreviations, and repeated characters. Before using this text for Natural Language Processing (NLP), preprocessing is required to clean and standardize the text.
+
+## 20 Messy Sentences
+
+1. Hii brooo 😂
+2. I'm cmng tmrw
+3. Gud mrng!!!
+4. LOL that's funny 🤣
+5. Plz send d notes
+6. Whr r u??
+7. Thnks alottt
+8. I luv this movieee
+9. OMG!!! sooo cool
+10. hv u done assgnmnt
+11. This is amazng!!!
+12. Cant w8 for it
+13. u r gr8
+14. okkk done 👍
+15. Wat r u doin
+16. bcz I ws busy
+17. Noooo wayyyy
+18. meet @ 5pm
+19. I'm sooo happpy 😊
+20. pls hlp meee
+
+## Issues Identified
+
+The sentences contain multiple problems such as slang words, emojis, spelling mistakes, repeated letters, and abbreviations. Words like "brooo", "gud", "plz" are slang. Emojis like 😂 🤣 👍 😊 are present. Some words contain typos such as "cmng", "assgnmnt", "mrng". Repeated characters like "sooo", "happpy" also appear. Short forms like "u", "r", "bcz" are used instead of proper words.
+
+## Preprocessing Needed
+
+To clean the text, the following preprocessing steps are required:
+
+* Convert text to lowercase
+* Remove punctuation
+* Remove emojis
+* Remove extra repeated characters
+* Replace slang and abbreviations
+* Remove stopwords
+* Tokenize the text into words
+
+## Conclusion
+
+Text preprocessing improves data quality and makes it suitable for machine learning models. Clean text helps NLP systems understand meaning better and produce accurate results.
