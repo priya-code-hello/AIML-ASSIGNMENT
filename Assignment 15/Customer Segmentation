@@ -1,0 +1,28 @@
+
+data = [
+    [25, 60],
+    [30, 65],
+    [22, 20],
+    [35, 15],
+    [40, 80],
+    [45, 85]
+]
+
+
+c1 = data[0]
+c2 = data[2]
+
+cluster1 = []
+cluster2 = []
+
+for point in data:
+    d1 = abs(point[0]-c1[0]) + abs(point[1]-c1[1])
+    d2 = abs(point[0]-c2[0]) + abs(point[1]-c2[1])
+
+    if d1 < d2:
+        cluster1.append(point)
+    else:
+        cluster2.append(point)
+
+print("Cluster 1:", cluster1)
+print("Cluster 2:", cluster2)
