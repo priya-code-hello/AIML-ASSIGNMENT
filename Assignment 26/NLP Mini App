@@ -1,0 +1,19 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+text = """
+Artificial Intelligence is transforming industries. 
+Machine learning and deep learning are subsets of AI.
+"""
+
+vectorizer = TfidfVectorizer(stop_words='english')
+X = vectorizer.fit_transform([text])
+
+features = vectorizer.get_feature_names_out()
+scores = X.toarray()[0]
+
+# Get top 5 keywords
+keywords = sorted(zip(features, scores), key=lambda x: x[1], reverse=True)[:5]
+
+print("Top Keywords:")
+for word, score in keywords:
+    print(f"{word}: {score:.3f}")
