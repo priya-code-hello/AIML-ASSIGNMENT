@@ -1,0 +1,17 @@
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer
+
+word_pairs = [
+    ("car", "automobile"),
+    ("happy", "joyful"),
+    ("big", "large"),
+    ("fast", "quick"),
+    ("smart", "intelligent")
+]
+
+vectorizer = CountVectorizer().fit([w for pair in word_pairs for w in pair])
+
+for w1, w2 in word_pairs:
+    vectors = vectorizer.transform([w1, w2]).toarray()
+    similarity = cosine_similarity([vectors[0]], [vectors[1]])[0][0]
+    print(f"{w1} - {w2} similarity: {similarity:.2f}")
