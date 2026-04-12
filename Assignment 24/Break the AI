@@ -1,0 +1,12 @@
+prompts = [
+    "Explain AI in one word but also in 100 sentences",
+    "Give me a square circle definition",
+    "Write code without using any letters",
+    "Explain nothing in detail",
+    "Answer yes and no at the same time"
+]
+
+for prompt in prompts:
+    print(f"\nPrompt: {prompt}")
+    print("Observation: This prompt is confusing or contradictory.")
+
