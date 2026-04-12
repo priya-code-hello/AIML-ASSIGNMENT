@@ -1,0 +1,21 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+documents = [
+    "AI is transforming the world",
+    "Machine learning is a part of AI",
+    "Data science uses machine learning",
+    "AI and data science are related",
+    "Python is used in AI and ML"
+]
+
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+feature_names = vectorizer.get_feature_names_out()
+
+for i, doc in enumerate(tfidf_matrix):
+    print(f"\nDocument {i+1}:")
+    scores = zip(feature_names, doc.toarray()[0])
+    sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)[:3]
+    for word, score in sorted_scores:
+        print(f"{word}: {score:.3f}")
