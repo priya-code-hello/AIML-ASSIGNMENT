@@ -1,0 +1,14 @@
+import cv2
+
+# Load image
+image = cv2.imread("image.jpg")
+
+print("Shape:", image.shape)
+print("Pixel (0,0):", image[0, 0])
+
+# Split channels
+b, g, r = cv2.split(image)
+
+print("Blue channel sample:", b[0,0])
+print("Green channel sample:", g[0,0])
+print("Red channel sample:", r[0,0])
