@@ -1,0 +1,23 @@
+from textblob import TextBlob
+
+reviews = [
+    "This movie is amazing!",
+    "I hated the film",
+    "It was okay, not great",
+    "Excellent acting and story",
+    "Worst movie ever"
+]
+
+for review in reviews:
+    analysis = TextBlob(review)
+    polarity = analysis.sentiment.polarity
+
+    if polarity > 0:
+        sentiment = "Positive"
+    elif polarity < 0:
+        sentiment = "Negative"
+    else:
+        sentiment = "Neutral"
+
+    print(f"Review: {review}")
+    print(f"Sentiment: {sentiment}\n")
